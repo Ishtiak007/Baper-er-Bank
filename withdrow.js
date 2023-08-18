@@ -15,6 +15,11 @@ document.getElementById("btn-withdrow").addEventListener("click", function () {
   const totalBalence = document.getElementById("totalBalence");
   const totalBalenceValue = totalBalence.innerText;
 
+  if (withdrowInputFieldValue > totalBalenceValue) {
+    alert("Bap er bank e oto taka nai");
+    return;
+  }
+
   const updateValue = totalBalenceValue - withdrowInputFieldValue;
 
   totalBalence.innerText = updateValue;
